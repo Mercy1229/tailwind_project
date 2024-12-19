@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-body-image bg-no-repeat bg-cover bg-fixed me-0">
+<!-- Navbar -->
+<div class="fixed top-0 w-full z-50 bg-transparent p-4" id="navbar">
+    <nav class="container mx-auto flex justify-between items-center flex-row">
+        <!-- Logo and Brand -->
+        <div class="flex items-center space-x-2">
+            <img src="./assets/logo.jfif" alt="logo" class="rounded-full h-16 w-16">
+            <span class="text-orange-500 text-2xl font-bold font-mono">SpicySpot</span>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (visible on small screens) -->
+        <div class="sm:hidden">
+            <button id="menuToggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Nav Links (hidden on small screens) -->
+        <ul id="menu" class="hidden sm:flex  sm:flex-row space-x-6 text-white font-semibold text-xl">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About us</a></li>
+            <li><a href="#Offers">Offers</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Sign In Button -->
+        <div class="sm:block">
+            <button class="border border-orange-400 text-white text-xl rounded-full px-4 py-2 hover:bg-orange-300">Sign in</button>
+        </div>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<div class="container flex flex-col justify-center items-center h-screen mx-auto lg:mx-auto">
+    <h1 class="text-4xl text-orange-400 font-dancing">Welcome to our</h1>
+    <h1 class="text-white font-extrabold text-5xl mt-2">RESTAURANT</h1>
+    <p class="text-lg text-white mt-2">THE BEST MULTI CUISINE RESTAURANT</p>
+    <input type="text" id="searchBar" placeholder="Search..." class="mt-5 px-4 py-2 border border-orange-400 rounded focus:border-red-800">
+    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+        <button class="border border-orange-400 text-white text-xl rounded-full px-4 py-2 hover:bg-orange-300">
+            <a href="#Reservation">Book Table</a>
+        </button>
+        <button class="border border-orange-400 text-white text-xl rounded-full px-4 py-2 hover:bg-orange-300">
+            <a href="#Menu">Get Menu</a>
+        </button>
+    </div>
+    <div id="root"></div>
+    <div id="orderSummary"></div>
+</div>
+
+<!-- About us -->
+    <div id="About" class="py-16 ml-5">
+        <!-- About Us Title -->
+        <h1 class="text-5xl font-semibold font-dancing text-orange-400 text-center mb-8">About Us</h1>
+    
+        <!-- About Us Content -->
+        <div class="container flex flex-col lg:flex-row mx-auto justify-center lg:justify-between items-center lg:items-start space-y-8 lg:space-y-0">
+            <!-- Text Section -->
+            <div class="lg:w-2/3 w-full text-center lg:text-left lg:pr-8">
+                <p class="text-white text-lg mt-2 text-justify">
+                    Welcome to <span class="text-orange-400 font-thin">SpicySpot!</span> your go-to destination for bold and exciting flavors! 
+                    Located in THOOTHUKUDI, we specialize in vibrant dishes crafted with fresh ingredients and a perfect blend of spices. 
+                    Founded by Mr.Samuel, our mission is to offer a dining experience that's both memorable and adventurous. 
+                    Our talented chefs and friendly staff are dedicated to making every visit exceptional. Whether you're here for a casual 
+                    lunch, a festive dinner, or a special celebration, SpicySpot is the perfect place to indulge in a feast that will delight 
+                    your senses and warm your soul.
+                </p>
+                <p class="text-white text-xl text-center lg:text-left mt-6">Join us at SpicySpot and spice up your life with every bite!</p>
+            </div>
+    
+            <!-- Image Section -->
+            <div class="lg:w-1/3 w-full flex justify-center lg:justify-start">
+                <img src="./assets/about.jpeg" alt="About SpicySpot" class="rounded-lg shadow-lg w-full sm:w-3/4 md:w-2/3 lg:w-full h-auto">
+            </div>
+        </div>
+    
+        <!-- About Us Cards Section -->
+        <div class="container ml-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 mx-auto sm:mx-auto md:mx-auto lg:mx-auto">
+            <!-- Card 1 -->
+            <div class="border border-gray-200 p-4 m-2 hover:bg-orange-200 transition-all duration-300">
+                <img src="./assets/about1.1.png" alt="Free Delivery" class="py-2 mx-auto h-40 w-32">
+                <div class="bg-orange-300 text-white h-10 sm:h-12 flex items-center justify-center mt-4">
+                    <p class="font-bold text-lg">Free Delivery</p>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="border border-gray-200 p-4 m-2 hover:bg-orange-200 transition-all duration-300">
+                <img src="./assets/about2.2.png" alt="Hygienic Cooking" class="py-2 mx-auto h-40 w-32">
+                <div class="bg-orange-300 text-white h-10 sm:h-12 flex items-center justify-center mt-4">
+                    <p class="font-bold text-lg">Hygienic Cooking</p>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="border border-gray-200 p-4 m-2 hover:bg-orange-200 transition-all duration-300">
+                <img src="./assets/about3.3.png" alt="Affordable Price" class="py-2 mx-auto h-40 w-32">
+                <div class="bg-orange-300 text-white h-10 sm:h-12 flex items-center justify-center mt-4">
+                    <p class="font-bold text-lg">Affordable Price</p>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="border border-gray-200 p-4 m-2 hover:bg-orange-200 transition-all duration-300">
+                <img src="./assets/about4.4.png" alt="24 Hours Service" class="py-2 mx-auto h-40 w-32">
+                <div class="bg-orange-300 text-white h-10 sm:h-12 flex items-center justify-center mt-4">
+                    <p class="font-bold text-lg">24 Hours Service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- Signature dishes -->
+    <div class="container flex flex-col items-center mx-auto mt-5 space-y-6">
+        <!-- Title -->
+        <h1 class="font-dancing font-semibold text-5xl text-orange-400 text-center">Our Signature Dishes</h1>
+    
+        <!-- First Row of Images -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-5 w-full px-4">
+            <img src="./assets/img1.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img2.1.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img2.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img3.1.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img3.2.jpg" alt="food" class="rounded-md w-full">
+        </div>
+    
+        <!-- Second Row of Images -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full px-4">
+            <img src="./assets/img3.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img4.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img5.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img6.jpg" alt="food" class="rounded-md w-full">
+        </div>
+    
+        <!-- Third Row of Images -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full px-4">
+            <img src="./assets/img9.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img8.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img7.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img10.jpg" alt="food" class="rounded-md w-full">
+            <img src="./assets/img11.jpg" alt="food" class="rounded-md w-full">
+        </div>
+    </div>
+    
+<!-- offers-->
+ <div id="Offers"> 
+    <div>
+    <h1 class="font-dancing font-semibold text-5xl text-orange-400 text-center mt-10">Our Combo Offers!</h1>
+    </div>
+    <div class="container flex flex-row m-2 justify-between space-x-3 mx-auto">
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer1.jpg" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Briyani Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">50% Offer</p>
+        <button class="border border-orange-400 text-white rounded-md p-2 m-2 ml-2 items-center" onclick="order()">order now</button>
+    </div>
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer2.jpg" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Breakfast Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">20% Offer</p>
+        <button class="mx-auto border border-orange-400 text-white rounded-md p-2 m-2 items-center">order now</button>
+    </div>
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer3.jfif" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Burger Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">30% Offer</p>
+        <button class="mx-auto border border-orange-400 text-white rounded-md p-2 m-2 items-center">order now</button>
+    </div>
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer4.jfif" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Lunch Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">25% Offer</p>
+        <button class="mx-auto border border-orange-400 text-white rounded-md p-2 m-2 items-center">order now</button>
+    </div>
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer5.jfif" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Pizza Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">10% Offer</p>
+        <button class="mx-auto border border-orange-400 text-white rounded-md p-2 m-2 items-center">order now</button>
+    </div>
+    <div class="flex flex-col space-x-1 border border-gray-200 w-1/6 pr-1">
+        <img src="./assets/offer6.jfif" alt="" class="rounded-lg mx-2 mt-2 h-28">
+        <h6 class="text-white text-center">Fish meal Combo</h6>
+        <p class="text-orange-400 font-bold text-xl text-center">30% Offer</p>
+        <button class="mx-auto border border-orange-400 text-white rounded-md p-2 m-2 items-center">order now</button>
+    </div>
+ </div>
+</div>
+<!-- Menu -->
+<div id="Menu">
+    <h1 class="font-dancing font-semibold text-5xl text-orange-400 text-center mt-10">Our Menus!</h1>
+    <!-- <input type="text" id="searchBar" placeholder="Search..." class="mt-5 px-4 py-2 border rounded">  -->
+    <div>
+        <div class="tabs mb-5 flex space-x-4 text-2xl" data-tabs="true">
+            <button class="tab active text-orange-500 font-semibold" data-tab-toggle="#tab_1_1">
+                Main Course
+            </button>
+            <button class="tab text-orange-300 hover:text-orange-400" data-tab-toggle="#tab_1_2">
+                Starter
+            </button>
+            <button class="tab text-orange-300 hover:text-orange-400" data-tab-toggle="#tab_1_3">
+                Drinks
+            </button>
+            <button class="tab text-orange-300 hover:text-orange-400" data-tab-toggle="#tab_1_4">
+                Desserts
+            </button>
+        </div>
+        
+        <div id="tab_1_1" class="block text-white ml-28 ">
+            <!-- Main Course items -->
+        </div>
+        <div id="tab_1_2" class="hidden text-white ml-28">
+            <!-- Starter items -->
+        </div>
+        <div id="tab_1_3" class="hidden text-white ml-28">
+            <!-- Drinks items -->
+        </div>
+        <div id="tab_1_4" class="hidden text-white ml-28">
+            <!-- Desserts items -->
+        </div>
+    </div>
+</div>
+
+
+  <!-- reservation -->
+   <div class="container border border-gray-100 mt-10 mx-auto my-auto pb-10" id="Reservation">
+    <h1 class="font-dancing font-semibold text-5xl text-orange-400 text-center m-5">Reserve your table</h1>
+    <form> 
+        <div class="container flex flex-row justify-between space-x-3 relative pr-3"> 
+        
+            <input type="text" id="name" placeholder="Name" 
+            class="text-white p-2 w-1/5 bg-transparent border border-orange-500 rounded py-3 px-4 ml-5 leading-tight focus:outline-none focus:bg-gray-300 focus:border-red-800 focus:text-black" id="grid-first-name" type="text">
+            <input type="email" id="email" placeholder="Email" 
+            class="text-white p-2 w-1/5 bg-transparent border border-orange-500 rounded py-3 px-4 ml-3 leading-tight focus:outline-none focus:bg-gray-300 focus:border-red-800 focus:text-black">
+            <input  type="date" id="date" placeholder="Date" 
+            class="text-white p-2 w-1/5 bg-transparent border border-orange-500 rounded py-3 px-4 ml-3 leading-tight focus:outline-none focus:bg-gray-300 focus:border-red-800 focus:text-black">
+            <input type="text" id="guest" placeholder="No of guests" 
+            class="text-white p-2 w-1/5 bg-transparent border border-orange-500 rounded py-3 px-4 ml-3 leading-tight focus:outline-none focus:bg-gray-300 focus:border-red-800 focus:text-black">
+            <button class="w-28 border border-orange-500 bg-orange-400 text-white text-xl rounded-md p-2 ml-5 me-3 hover:bg-orange-300" onclick="Save()">Submit</button>
+            
+        </div> 
+        </form>  
+   </div>
+  <!-- footer section -->
+<div class="bg-gray-900 h-30 mt-10 flex flex-col p-2" id="Contact">
+    <div class="flex flex-row justify-between p-2">
+        <div class="flex my-auto">
+            <img src="./assets/logo.jfif" alt="logo" class="rounded-full h-16 w-16">
+            <span class="text-orange-500 text-2xl my-auto mx-2 font-bold font-mono">SpicySpot</span>
+        </div>
+        <div>
+            <h1 class="text-semibold text-orange-400 text-2xl">Quick links</h1>
+            <ul class="flex flex-col ml-3 text-white text-lg">
+                <li>Home</li>
+                <li>About us</li>
+                <li>Offers</li>
+                <li>Menu</li>
+                <li>contact</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="text-semibold text-orange-400 text-2xl text-center">Contact us</h1>
+            <p class="text-white"><i class="fas fa-map-marker text-orange-400"></i> 4/15 Ghandhi Street,</p>
+            <p class="text-white ml-2">Eral road,</p>
+            <p class="text-white ml-2">Thoothukudi,628 600.</p>
+            <p class="mt-2 text-white"><i class="fas fa-envelope text-orange-400"></i> spicyspot@io.com</p>
+            <p class="text-white"><i class="fas fa-phone text-orange-400"></i> 90001 10009</p>
+        </div>
+        <div>
+            <h3 class="text-semibold text-orange-400 text-2xl">Follow Us</h3>
+            <div class="flex flex-row space-x-3 text-orange-400 ">
+                <a href="#"><i class="fab fa-facebook-f  text-orange-400"></i></a>
+                <a href="#"><i class="fab fa-twitter  text-orange-400"></i></a>
+                <a href="#"><i class="fab fa-instagram  text-orange-400"></i></a>
+                <a href="#"><i class="fab fa-youtube  text-orange-400"></i></a>
+            </div>
+        </div>
+    </div>
+<div class="bg-black p-1"><p class="text-white text-center">&copy; 2024 ResturantWebsite. All Rights Reserved.</p></div>
+   </div>
+  <script src="index.js"></script>
+</body>
+</html>
